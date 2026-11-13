@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>World of Ja'Dyl — Scheduling</title>
-<meta property="og:title" content="VoidWalkers — When can you play?">
+<meta property="og:title" content="World of Ja'Dyl — When can you play?">
 <meta property="og:description" content="Paint the hours you're free for the next session in the World of Ja'Dyl.">
 <meta property="og:image" content="hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,7 +171,7 @@ function demoState() {
     const d = new Date(Date.now() + i * 864e5);
     cols.push({ key: d.toISOString().slice(0, 10), label: days[d.getDay()], sub: mon[d.getMonth()] + ' ' + d.getDate() });
   }
-  const cfg = { title: 'VoidWalkers — Next Session', subtitle: 'Paint every hour you can play. All times Eastern.', mode: 'dates', start_hour: 17, end_hour: 24, slot_minutes: 30, columns: cols };
+  const cfg = { title: 'World of Ja'Dyl — Next Session', subtitle: 'Paint every hour you can play. All times Eastern.', mode: 'dates', start_hour: 17, end_hour: 24, slot_minutes: 30, columns: cols };
   const pick = (ci, a, b) => { const out = []; for (let m = a * 60; m < b * 60; m += 30) out.push(cols[ci].key + '|' + m); return out; };
   const responses = [
     { name: 'Aylin', slots: [...pick(1, 18, 23), ...pick(4, 17, 22), ...pick(5, 19, 24)] },
